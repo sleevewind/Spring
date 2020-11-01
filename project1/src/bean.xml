@@ -5,6 +5,18 @@
     <!--配置User对象创建-->
     <bean id="user" class="com.heat.User"/>
 
+    <!--set方法注入属性-->
+    <bean id="book" class="com.heat.Book">
+        <!--使用property完成属性注入-->
+        <property name="name" value="长恨歌"/>
+        <property name="author" value="白居易"/>
+    </bean>
+
+    <!--有参构造注入属性-->
+    <bean id="order" class="com.heat.Order">
+        <constructor-arg name="name" value="HUAWEI"/>
+        <constructor-arg name="address" value="China"/>
+    </bean>
 </beans>
 
 
